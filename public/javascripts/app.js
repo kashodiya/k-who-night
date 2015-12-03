@@ -33,14 +33,35 @@
           dateObj.getUTCDate();
     };
     
+    this.msg = '';
+    
     this.onDate = getDate();
     
     this.search = function(){
+      if(that.term == ''){
+        that.msg = 'Please enter What.';
+        return;
+      }
+      if(that.location == ''){
+        that.msg = 'Please enter Where.';
+        return;
+      }
+      that.msg = 'Searching....';
+      that.businesses = [];
       console.log('searching', that);
       var params = {term: that.term, location: that.location, onDate: getDate()};
-      $http({url: '/api/search', method: 'get', params: params}).success(function(data){
-        console.log(data);
-        that.businesses = data.businesses;
+      $http({url: '/api/search', method: 'get', params: params}).then(function(data){
+        if(data.data.status == 'success'){
+          console.log('search succes', data);
+          that.msg = '';
+          that.businesses = data.data.response.businesses;
+        }else{
+          console.log('search fail, response did come', data);
+          that.msg = 'Failed to search! ' + data.data.err.source.text;
+        }
+      }, function(err){
+        console.log('search fail', err);
+        that.msg = 'Failed to search!';
       });
     };
     

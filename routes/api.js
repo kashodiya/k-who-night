@@ -52,8 +52,13 @@ router.get('/search', function(req, res, next) {
             b.going = false;
           }
         });
-        res.json(data);
+        res.json({status: 'success', response: data});
       });
+    });
+  }, function(err){
+    res.json({
+      status: 'fail',
+      err: err
     });
   })  
   
