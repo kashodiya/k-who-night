@@ -3,8 +3,8 @@
   
   app.controller('SearchCtrl', function($http, $scope){
     var that = this;
-    this.term = 'mango';
-    this.location = 'san francisco';
+    this.term = '';
+    this.location = '';
     this.businesses = [];
     
     $scope.today = function() {
