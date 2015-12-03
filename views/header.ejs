@@ -1,0 +1,34 @@
+<html ng-app="whoNightApp">
+<head>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"> 
+  <link rel="stylesheet" href="/stylesheets/jumbotron-narrow.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="/bower_components/angular/angular.min.js"></script>  
+  <script src="/javascripts/app.js"></script>  
+  <script src="/javascripts/controllers.js"></script>  
+  <script src="/javascripts/directives.js"></script>  
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>  
+  
+  
+</head>  
+<body>
+
+<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <% if (typeof user == 'undefined') { %>
+              <li role="presentation"><a href="/login/twitter">Login</a></li>
+            <% } else { %>
+              <li role="presentation"><a href="/welcome">Search</a></li>
+              <li role="presentation"><a href="/logout">Logout</a></li>
+            <% }%>
+          </ul>
+        </nav>
+        <h3 class="text-muted">WIG-W</h3>
+      </div>
+      
+      
+

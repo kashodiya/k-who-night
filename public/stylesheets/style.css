@@ -1,0 +1,12 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.form-inline {
+    padding:5px;
+}
+.form-inline > * {
+    margin:15px 12px !important;
+}
+
+.going-ind{
+  padding-top: 5px;
+}

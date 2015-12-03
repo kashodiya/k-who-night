@@ -1,0 +1,23 @@
+{
+  "name": "k-who-night",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Ashodiya",
+    "Kaushik <Kaushik.Ashodiya@sf.frb.org>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/kashodiya/k-fcc-vote",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.14.3",
+    "bootstrap": "~3.3.6"
+  }
+}
